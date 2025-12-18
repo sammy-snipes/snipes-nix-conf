@@ -1,0 +1,7 @@
+[core]
+    sshCommand = ssh -i ~/.ssh/komodo_new
+[user]
+    testKey = main-config-included
+[user]
+    name = sam-h-ellis
+    email = sam.ellis@komodohealth.com

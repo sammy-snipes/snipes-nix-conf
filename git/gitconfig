@@ -1,0 +1,19 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[core]
+	editor = nvim
+[user]
+	name = sam-h-ellis
+	email = sam.ellis@komodohealth.com
+
+[includeIf "gitdir/i:~/Desktop/Work/"]
+    path = ~/Desktop/Work/.gitconfig
+
+# personal in personal + config dir
+[includeIf "gitdir/i:~/Desktop/Personal/"]
+    path = ~/Desktop/Personal/.gitconfig
+[includeIf "gitdir/i:~/.config/"]
+    path = ~/Desktop/Personal/.gitconfig

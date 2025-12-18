@@ -1,0 +1,38 @@
+[profile ps-events-010539206827]
+sso_start_url = https://komodo-health.awsapps.com/start/#/
+sso_region = us-west-2
+sso_account_id = 010539206827
+sso_role_name = ps-events
+region = us-west-2
+
+[profile oracle-prod]
+sso_start_url = https://komodo-health.awsapps.com/start/#/
+sso_region = us-west-2
+sso_account_id = 433331841179
+sso_role_name = ProdAccess_v1
+region = us-west-2
+
+
+[profile marmot_prod]
+sso_start_url = https://komodo-health.awsapps.com/start/#/
+sso_region = us-west-2
+sso_account_id = 795966614303
+sso_role_name = ProdAccess_v1
+region = us-west-2
+
+[profile marmot_dev]
+sso_start_url = https://komodo-health.awsapps.com/start/#/
+sso_region = us-west-2
+sso_account_id = 703686967765
+sso_role_name = DevAccess_v1
+region = us-west-2
+
+
+[profile norwood]
+sso_start_url = https://norwood-ai.awsapps.com/start
+sso_region = us-east-1
+sso_account_id = 767398038856
+sso_role_name = AdministratorAccess
+region = us-east-1
+
+

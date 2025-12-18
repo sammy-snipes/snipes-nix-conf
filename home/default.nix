@@ -8,6 +8,17 @@
     packages = with pkgs; [ duckdb ffmpeg mpv luarocks yarn ];
     file = {
       "Scripts" = { source = ./scripts; recursive = true; };
+      ".config/nvim" = { source = ../nvim; recursive = true; };
+      ".config/karabiner" = { source = ../karabiner; recursive = true; };
+      ".p10k.zsh" = { source = ../extras/.p10k.zsh; };
+      ".zsh" = { source = ../extras/zsh; recursive = true; };
+      ".tmux.conf" = { source = ../tmux/tmux.conf; };
+      ".ssh/config" = { source = ../ssh/config; };
+      ".aws/config" = { source = ../aws/config; };
+      # Git configs - main gitconfig references these by path
+      ".gitconfig" = { source = ../git/gitconfig; };
+      "Desktop/Personal/.gitconfig" = { source = ../git/gitconfig-personal; };
+      "Desktop/Work/.gitconfig" = { source = ../git/gitconfig-work; };
     };
   };
 

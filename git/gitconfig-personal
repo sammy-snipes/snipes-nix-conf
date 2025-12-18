@@ -1,0 +1,7 @@
+[core]
+    sshCommand = ssh -i ~/.ssh/hanzomain -F /dev/null
+[user]
+    testKey = main-config-included
+[user]
+    name = sammysnipes
+    email = hanzomain26267@gmail.com

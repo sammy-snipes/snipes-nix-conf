@@ -1,0 +1,37 @@
+# komodo account
+# Host github.com-sam-h-ellis
+#     HostName github.com
+#     User git
+#     IdentityFile ~/.ssh/komodo
+#
+# Host github.com-sammy-snipes
+#     HostName github.com
+#     User git
+#     IdentityFile ~/.ssh/hanzomain
+
+
+Host nixos
+    HostName sammysnipes-nixos.duckdns.org 
+    User sammysnipes
+    IdentityFile ~/.ssh/nix_key
+
+Host droplet 
+    HostName 165.227.120.131
+    User root
+    IdentityFile ~/.ssh/droplet_ssh_key
+
+Host shanes_marmot
+    HostName 10.223.233.24
+    User ubuntu
+    IdentityFile ~/.ssh/shanes_marmot
+
+Host norwood
+    HostName 98.95.108.246
+    User ubuntu
+    IdentityFile ~/.ssh/norwood_ec2
+
+Host norwood-tunnel
+    HostName 98.95.108.246
+    User ubuntu
+    IdentityFile ~/.ssh/norwood_ec2
+    LocalForward 5432 hearth.cmxc44w2iyxs.us-east-1.rds.amazonaws.com:5432

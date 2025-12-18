@@ -28,13 +28,19 @@
     enable = true;
     onActivation = {
       autoUpdate = true;
-      cleanup = "zap";
+      cleanup = "none";  # Safe mode: won't remove unlisted packages. Change to "zap" later.
     };
     casks = [
       "raycast"
       "wezterm"
       "chromium"
       "mac-mouse-fix"
+      "karabiner-elements"
+      "font-jetbrains-mono-nerd-font"
+      "font-inter"
+      "font-atkinson-hyperlegible"
+      "docker"
+      "obsidian"
     ];
     taps = [ "jesseduffield/lazygit" ];
     brews = [
@@ -45,6 +51,7 @@
       "powerlevel10k"
       "zsh-syntax-highlighting"
       "zsh-autosuggestions"
+      "postgresql@14"
     ];
   };
 
@@ -58,9 +65,18 @@
         autohide = true;
         autohide-delay = 0.0;
         autohide-time-modifier = 0.4;
-        orientation = "bottom";
+        orientation = "left";
         show-recents = false;
         tilesize = 48;
+        magnification = true;
+        largesize = 32;
+        launchanim = false;
+        mineffect = "scale";
+        # Hot corners: 14 = Quick Note
+        wvous-br-corner = 14;
+      };
+      screencapture = {
+        location = "~/Desktop/screenshots";
       };
       finder = {
         AppleShowAllExtensions = true;
@@ -73,16 +89,18 @@
       NSGlobalDomain = {
         AppleShowAllExtensions = true;
         AppleShowAllFiles = true;
+        AppleInterfaceStyle = "Dark";
         KeyRepeat = 2;
         InitialKeyRepeat = 15;
         NSAutomaticCapitalizationEnabled = false;
         NSAutomaticSpellingCorrectionEnabled = false;
         NSAutomaticPeriodSubstitutionEnabled = false;
         NSAutomaticQuoteSubstitutionEnabled = false;
+        "com.apple.swipescrolldirection" = false;  # Unnatural scroll direction
       };
       trackpad = {
-        Clicking = true;
-        TrackpadThreeFingerDrag = true;
+        Clicking = false;
+        TrackpadThreeFingerDrag = false;
       };
     };
   };

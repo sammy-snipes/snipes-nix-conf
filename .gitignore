@@ -1,0 +1,7 @@
+.secrets.env
+*.pem
+*.key
+raycast-backup/
+result
+result-*
+.DS_Store

@@ -1,0 +1,19 @@
+#!/bin/bash
+cd /Users/sam.ellis/Desktop/Work/marmot
+uv run python -c "
+from urllib.parse import quote_plus
+from marmot.models.aws.secrets import RdsSecret
+
+s = RdsSecret.get('marmot-db')
+print(f'Host: {s.host}')
+print(f'DB: {s.database}')
+print(f'User: {s.username}')
+print(f'Password: {s.password}')
+print(f'Port: {s.port}')
+print()
+print('Connect with:')
+print(f'psql -h {s.host} -U {s.username} -d {s.database} -p {s.port}')
+print()
+print('Or use connection string:')
+print(f\"psql 'postgresql://{s.username}:{quote_plus(s.password)}@{s.host}:{s.port}/{s.database}'\")
+"

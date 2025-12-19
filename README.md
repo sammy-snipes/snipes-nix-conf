@@ -26,8 +26,12 @@ One command to set up a new Mac with all my tools, configs, and preferences.
 # 1. Install Nix
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
-# 2. Clone config (use HTTPS first, no SSH keys yet)
+# 2. Clone config
+# Public repo:
 git clone https://github.com/sammy-snipes/snipes-nix-conf.git ~/.config/nix-darwin
+# Private repo: generate SSH key first, add to GitHub, then:
+# ssh-keygen -t ed25519 -f ~/.ssh/hanzomain -C "sam"
+# git clone git@github.com:sammy-snipes/snipes-nix-conf.git ~/.config/nix-darwin
 
 # 3. Bootstrap (installs everything)
 nix run nix-darwin -- switch --flake ~/.config/nix-darwin
@@ -45,8 +49,9 @@ That's it. Everything else is automatic.
 
 1. **SSH Keys** - Copy from backup or regenerate (see below)
 2. **Raycast** - Import config: Raycast → Settings → Advanced → Import → `raycast/Raycast.rayconfig`
-3. **AWS Auth** - Run `gsc` to authenticate via SSO
-4. **Git remote** - Switch to SSH: `cd ~/.config/nix-darwin && git remote set-url origin git@github.com:sammy-snipes/snipes-nix-conf.git`
+3. **Cursor Extensions** - Run `~/.config/nix-darwin/cursor/install-extensions.sh`
+4. **AWS Auth** - Run `gsc` to authenticate via SSO
+5. **Git remote** - Switch to SSH: `cd ~/.config/nix-darwin && git remote set-url origin git@github.com:sammy-snipes/snipes-nix-conf.git`
 
 ---
 

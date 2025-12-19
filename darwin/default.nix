@@ -33,6 +33,7 @@
       "font-atkinson-hyperlegible"
       "docker"
       "obsidian"
+      "cursor"
     ];
     taps = [ "jesseduffield/lazygit" ];
     brews = [

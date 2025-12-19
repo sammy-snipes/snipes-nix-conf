@@ -1,23 +1,15 @@
 { pkgs, username, ... }:
 
 {
-  nix = {
-    settings = {
-      experimental-features = [ "nix-command" "flakes" ];
-      auto-optimise-store = true;
-    };
-    gc = {
-      automatic = true;
-      interval = { Weekday = 0; Hour = 2; Minute = 0; };
-      options = "--delete-older-than 30d";
-    };
-  };
+  nix.enable = false;  # Using Determinate Nix installer
+
+  system.primaryUser = username;
 
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
     git curl wget
-    eza bat fd ripgrep fzf zoxide thefuck
+    eza bat fd ripgrep fzf zoxide
     neovim lazygit gh jq yq
     rustup nodejs_22
     awscli2 terraform docker

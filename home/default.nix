@@ -5,7 +5,7 @@
     username = username;
     homeDirectory = "/Users/${username}";
     stateVersion = "24.05";
-    packages = with pkgs; [ duckdb ffmpeg mpv luarocks yarn ];
+    packages = with pkgs; [ duckdb ffmpeg mpv luarocks yarn uv ];
     file = {
       "Scripts" = { source = ./scripts; recursive = true; };
       ".config/nvim" = { source = ../nvim; recursive = true; };
@@ -58,7 +58,7 @@
       rebuild = "darwin-rebuild switch --flake ~/.config/nix-darwin";
       ftp = "lftp";
     };
-    initExtra = ''
+    initContent = ''
       source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
       [[ -f ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh ]] && source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
@@ -66,12 +66,10 @@
       bindkey '^[[B' history-search-forward
       eval "$(zoxide init zsh)"
       eval "$(fzf --zsh)"
-      eval "$(thefuck --alias)"
-      eval "$(thefuck --alias fk)"
       export PYENV_ROOT="$HOME/.pyenv"
       [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-      eval "$(pyenv init -)"
-      eval "$(rbenv init - zsh)"
+      command -v pyenv &>/dev/null && eval "$(pyenv init -)"
+      command -v rbenv &>/dev/null && eval "$(rbenv init - zsh)"
       export NVM_DIR="$HOME/.nvm"
       [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
       [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"

@@ -22,7 +22,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
-    darwinConfigurations."sams-macbook" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."MacBook-Pro" = nix-darwin.lib.darwinSystem {
       inherit system;
       specialArgs = { inherit inputs username; };
       modules = [
@@ -31,6 +31,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "backup";
           home-manager.extraSpecialArgs = { inherit inputs username; };
           home-manager.users.${username} = import ./home;
         }

@@ -1,0 +1,5 @@
+[komodohealth]
+name = "komodohealth"
+account = "komodohealth"
+user = "SELLIS"
+authenticator = "externalbrowser"

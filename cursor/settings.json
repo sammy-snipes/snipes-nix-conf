@@ -1,0 +1,199 @@
+{
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "/bin/bash",
+      "icon": "terminal-bash",
+      "args": ["-l", "-i"]
+    }
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": ["-ExecutionPolicy", "Bypass"]
+    }
+  },
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "/bin/zsh",
+      "args": ["-l", "-i"]
+    },
+    "tmux-shell": {
+      "path": "tmux",
+      "args": ["new-session", "-A", "-s", "vscode:${workspaceFolder}"]
+    }
+  },
+  "editor.lineNumbers": "relative",
+  "vim.leader": "<Space>",
+  "vim.surround": true,
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<S-tab>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["tab"],
+      "commands": [":bnext"]
+    },
+    {
+      "before": ["leader", "p"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["leader", "/"],
+      "commands": ["editor.action.commentLine"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<leader>", "/"],
+      "commands": ["editor.action.commentLine"],
+      "when": "editorTextFocus && !editorReadonly"
+    }
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "python.logging.level": "info",
+  "jupyter.logging.level": "debug",
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false,
+  // "python.analysis.typeCheckingMode": "basic",
+  // "python.analysis.extraPaths": [
+  //   "/Users/sam.ellis/.pyenv/versions/scylla/lib/python3.11/site-packages"
+  // ],
+  "editorformatOnSaveMode": "file",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "vim.smartRelativeLine": true,
+  "explorer.confirmDelete": false,
+  "JSON-zain.json.autorefresh": true,
+  "explorer.confirmDragAndDrop": false,
+  "[html]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnType": true
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "python.languageServer": "None",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "ruff.nativeServer": true,
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter",
+    "editor.formatOnSave": true
+  },
+  "[snowflake-sql]": {
+    "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc",
+    "editor.formatOnSave": true
+  },
+  "autoDocstring.docstringFormat": "numpy",
+  "notebook.output.scrolling": true,
+  "jupyter.askForKernelRestart": false,
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontLigatures": true,
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "--shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "--shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": ["%DOCFILE%"]
+    }
+  ],
+  "settingsSync.ignoredExtensions": [],
+  "indentRainbow.includedLanguages": ["sql", "snowflake-sql"],
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "window.zoomLevel": -1.5,
+  "settingsSync.keybindingsPerPlatform": false,
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.panel.defaultLocation": "right",
+  "notebook.formatOnCellExecution": true,
+  "notebook.formatOnSave.enabled": true,
+  "breadcrumbs.enabled": false,
+  "editor.renderWhitespace": "none",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "git.openRepositoryInParentFolders": "never",
+  "snowflake.connectionsConfigFile": "/Users/sam.ellis/.snowflake/connections.toml",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "none",
+  "window.titleBarStyle": "custom",
+  "workbench.editor.empty.hint": "hidden",
+  "cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput"],
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "cursor.composer.textSizeScale": 1.3,
+  "notebook.lineNumbers": "on",
+  "python.defaultInterpreterPath": "python",
+  // based 
+  "basedpyright.analysis.inlayHints.callArgumentNames": false,
+  "basedpyright.analysis.typeCheckingMode": "standard",
+  "database-client.autoSync": true,
+  "makefile.configureOnOpen": true
+}

@@ -19,6 +19,11 @@
       ".gitconfig" = { source = ../git/gitconfig; };
       "Desktop/Personal/.gitconfig" = { source = ../git/gitconfig-personal; };
       "Desktop/Work/.gitconfig" = { source = ../git/gitconfig-work; };
+      # Cursor editor settings
+      "Library/Application Support/Cursor/User/settings.json" = { source = ../cursor/settings.json; };
+      "Library/Application Support/Cursor/User/keybindings.json" = { source = ../cursor/keybindings.json; };
+      # Snowflake connections
+      ".snowflake/connections.toml" = { source = ../snowflake/connections.toml; };
     };
   };
 
